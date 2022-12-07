@@ -1,0 +1,159 @@
+:root {
+  --color-primary: #46d7ac;
+  --color-divider: #81ceb6;
+  --row-even: #ebf2d3;
+  --row-odd: #fffdff;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 576px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 2s;
+  height: 80vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+main {
+  margin: 1.4rem auto;
+}
+
+.heading {
+  background-color: var(--color-primary);
+  min-height: 10vh;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+label {
+  font-weight: 500;
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+input {
+  border: 1px solid rgb(144, 144, 144) !important;
+}
+
+input:focus {
+  border: 2px solid rgb(52, 37, 37) !important;
+}
+
+.separator {
+  width: 1px;
+  height: 70vh;
+  background-color: var(--color-divider);
+}
+
+.divider {
+  background-color: var(--color-divider);
+  width: 100%;
+  height: 2px;
+}
+
+.enrolled-section {
+  max-height: 33rem;
+  overflow-y: auto;
+}
+
+
+.table-striped > tbody > tr:nth-child(even) > td {
+  background-color: var(--row-even);
+}
+.table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: var(--row-odd);
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+  border: 2px solid #a0be44;
+}
+
+thead {
+  background-color: #a7c93f;
+}
+
+thead > tr > th,
+td {
+  padding: 0.25rem 0.5rem !important;
+}
+
+#table-data > tr {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+#table-data > tr > td:nth-child(even) {
+  width: 8.25rem !important;
+}
+
+img {
+  width: 110px;
+  height: 140px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer {
+  position: relative;
+  background-color: var(--color-primary);
+  padding: 2px;
+  bottom: 0;
+  border: 2px solid black;
+}
+
+svg {
+  fill: var(--color-primary);
+  height: 10rem;
+  width: 10rem;
+}
